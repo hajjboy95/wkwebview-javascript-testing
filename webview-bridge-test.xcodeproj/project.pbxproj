@@ -12,9 +12,15 @@
 		66632514221BD98800CEB04C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66632512221BD98800CEB04C /* Main.storyboard */; };
 		66632516221BD98A00CEB04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66632515221BD98A00CEB04C /* Assets.xcassets */; };
 		66632519221BD98A00CEB04C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66632517221BD98A00CEB04C /* LaunchScreen.storyboard */; };
+		66632525221BFF6E00CEB04C /* setupWebViewJavascriptBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 66632524221BFF6E00CEB04C /* setupWebViewJavascriptBridge.js */; };
+		66632527221C007D00CEB04C /* echo.html in Resources */ = {isa = PBXBuildFile; fileRef = 66632526221C007D00CEB04C /* echo.html */; };
+		66632529221E4C2D00CEB04C /* wkWebViewExample.html in Resources */ = {isa = PBXBuildFile; fileRef = 66632528221E4C2D00CEB04C /* wkWebViewExample.html */; };
+		6663252B221E4EEE00CEB04C /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663252A221E4EEE00CEB04C /* WkWebViewController.swift */; };
+		DAD00545B5728568813E7FB7 /* Pods_webview_bridge_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42B8F85DE340E0BD586601 /* Pods_webview_bridge_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		571A853A065F4C2E99F0D173 /* Pods-webview-bridge-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webview-bridge-test.release.xcconfig"; path = "Target Support Files/Pods-webview-bridge-test/Pods-webview-bridge-test.release.xcconfig"; sourceTree = "<group>"; };
 		6663250B221BD98800CEB04C /* webview-bridge-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webview-bridge-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6663250E221BD98800CEB04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66632510221BD98800CEB04C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,13 @@
 		66632515221BD98A00CEB04C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66632518221BD98A00CEB04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6663251A221BD98A00CEB04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66632521221BFA9B00CEB04C /* webview-bridge-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "webview-bridge-test-Bridging-Header.h"; sourceTree = "<group>"; };
+		66632524221BFF6E00CEB04C /* setupWebViewJavascriptBridge.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = setupWebViewJavascriptBridge.js; sourceTree = "<group>"; };
+		66632526221C007D00CEB04C /* echo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = echo.html; sourceTree = "<group>"; };
+		66632528221E4C2D00CEB04C /* wkWebViewExample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wkWebViewExample.html; sourceTree = "<group>"; };
+		6663252A221E4EEE00CEB04C /* WkWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
+		6A23D51D6E407C3C1D24955E /* Pods-webview-bridge-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webview-bridge-test.debug.xcconfig"; path = "Target Support Files/Pods-webview-bridge-test/Pods-webview-bridge-test.debug.xcconfig"; sourceTree = "<group>"; };
+		AD42B8F85DE340E0BD586601 /* Pods_webview_bridge_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_webview_bridge_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD00545B5728568813E7FB7 /* Pods_webview_bridge_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06C4111DC44066D9981DB113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD42B8F85DE340E0BD586601 /* Pods_webview_bridge_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66632502221BD98800CEB04C = {
 			isa = PBXGroup;
 			children = (
 				6663250D221BD98800CEB04C /* webview-bridge-test */,
 				6663250C221BD98800CEB04C /* Products */,
+				F129FDED72CC74FA925DB184 /* Pods */,
+				06C4111DC44066D9981DB113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,28 @@
 		6663250D221BD98800CEB04C /* webview-bridge-test */ = {
 			isa = PBXGroup;
 			children = (
+				66632528221E4C2D00CEB04C /* wkWebViewExample.html */,
+				66632526221C007D00CEB04C /* echo.html */,
 				6663250E221BD98800CEB04C /* AppDelegate.swift */,
 				66632510221BD98800CEB04C /* ViewController.swift */,
 				66632512221BD98800CEB04C /* Main.storyboard */,
 				66632515221BD98A00CEB04C /* Assets.xcassets */,
 				66632517221BD98A00CEB04C /* LaunchScreen.storyboard */,
 				6663251A221BD98A00CEB04C /* Info.plist */,
+				66632521221BFA9B00CEB04C /* webview-bridge-test-Bridging-Header.h */,
+				66632524221BFF6E00CEB04C /* setupWebViewJavascriptBridge.js */,
+				6663252A221E4EEE00CEB04C /* WkWebViewController.swift */,
 			);
 			path = "webview-bridge-test";
+			sourceTree = "<group>";
+		};
+		F129FDED72CC74FA925DB184 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A23D51D6E407C3C1D24955E /* Pods-webview-bridge-test.debug.xcconfig */,
+				571A853A065F4C2E99F0D173 /* Pods-webview-bridge-test.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6663251D221BD98B00CEB04C /* Build configuration list for PBXNativeTarget "webview-bridge-test" */;
 			buildPhases = (
+				F819EFB345B1F4AA75DABE4B /* [CP] Check Pods Manifest.lock */,
 				66632507221BD98800CEB04C /* Sources */,
 				66632508221BD98800CEB04C /* Frameworks */,
 				66632509221BD98800CEB04C /* Resources */,
+				863B38F61410DE8FB7162CFD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +136,7 @@
 				TargetAttributes = {
 					6663250A221BD98800CEB04C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -122,19 +163,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66632525221BFF6E00CEB04C /* setupWebViewJavascriptBridge.js in Resources */,
+				66632527221C007D00CEB04C /* echo.html in Resources */,
 				66632519221BD98A00CEB04C /* LaunchScreen.storyboard in Resources */,
 				66632516221BD98A00CEB04C /* Assets.xcassets in Resources */,
 				66632514221BD98800CEB04C /* Main.storyboard in Resources */,
+				66632529221E4C2D00CEB04C /* wkWebViewExample.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		863B38F61410DE8FB7162CFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-webview-bridge-test/Pods-webview-bridge-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-webview-bridge-test/Pods-webview-bridge-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F819EFB345B1F4AA75DABE4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-webview-bridge-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66632507221BD98800CEB04C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6663252B221E4EEE00CEB04C /* WkWebViewController.swift in Sources */,
 				66632511221BD98800CEB04C /* ViewController.swift in Sources */,
 				6663250F221BD98800CEB04C /* AppDelegate.swift in Sources */,
 			);
@@ -280,8 +372,10 @@
 		};
 		6663251E221BD98B00CEB04C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A23D51D6E407C3C1D24955E /* Pods-webview-bridge-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PLPA3P6FN;
 				INFOPLIST_FILE = "webview-bridge-test/Info.plist";
@@ -291,6 +385,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ismailElHabbash.prayerTimesNotifications.webview-bridge-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "webview-bridge-test/webview-bridge-test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +394,10 @@
 		};
 		6663251F221BD98B00CEB04C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571A853A065F4C2E99F0D173 /* Pods-webview-bridge-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PLPA3P6FN;
 				INFOPLIST_FILE = "webview-bridge-test/Info.plist";
@@ -309,6 +407,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ismailElHabbash.prayerTimesNotifications.webview-bridge-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "webview-bridge-test/webview-bridge-test-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

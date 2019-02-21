@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <style type='text/css'>
+            html { font-family:Helvetica; color:#222; }
+            h1 { color:steelblue; font-size:24px; margin-top:24px; }
+            button { margin:0 3px 10px; font-size:12px; }
+            .logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+            </style>
+</head><body>
+    <h1>WebViewJavascriptBridge Demo</h1>
+    <script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+    
+    
+    
+    setupWebViewJavascriptBridge(function(bridge) {
+                                 clickMe(bridge) // bar button item navigation
+
+                                 
+                                 var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
+                                 callbackButton.innerHTML = 'Tap this js Button'
+                                 callbackButton.onclick = function(e) {
+                                 e.preventDefault()
+                                 bridge.callHandler('jsButtonTapped', {'title': 'JS button Brought me here', 'segue': 'toVC4'}, function(response) {
+                                                    
+                                                    
+                                    })
+                                 }
+                                 })
+                                 
+                                 
+             function clickMe(bridge) {
+                 bridge.registerHandler('tap-me-button-tapped', function(data, responseCallback) {
+                                        const segueIds = ["toVC1", "toVC2", "toVC3"]
+                                        const segueId = segueIds[Math.floor(Math.random()*segueIds.length)];
+                                        
+                                        responseCallback(segueId)
+                                        })
+             }
+        </script>
+    <div id='buttons'></div>
+</body></html>
+
+
